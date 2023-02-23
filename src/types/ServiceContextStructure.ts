@@ -1,4 +1,4 @@
-import { ServiceAction } from "../store/actions/projectsActions/types/actionsProjects";
+import { ServiceAction } from "../store/actions/serviceActions/types/actionsService";
 import Service from "./Service";
 
 export type ServiceSrtucture = {
