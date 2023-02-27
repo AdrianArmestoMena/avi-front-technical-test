@@ -39,6 +39,7 @@ const useApi = () => {
           phone: contact_phone,
           type: service_type,
           brand,
+          dateFormat: Date.now(),
         };
         console.log(await serviceData);
         dispatch(loadServiceActionCreator(await newService));
@@ -49,7 +50,52 @@ const useApi = () => {
     [dispatch]
   );
 
-  return { loadService };
+  const updateConditionService = useCallback(
+    async (id: string, newConditions: string) => {
+      try {
+        const response: AxiosResponse<Response> = await axios.put(
+          `${apiUrl}service/updateCondition/${id}`,
+          { condition: newConditions },
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        if (response.status === 404) {
+          throw new Error();
+        }
+        loadService(id);
+      } catch {
+        console.log(apiUrl);
+      }
+    },
+    [loadService]
+  );
+
+  const updateDateService = useCallback(
+    async (id: string, date: string) => {
+      try {
+        const response: AxiosResponse<Response> = await axios.put(
+          `${apiUrl}service/updateDate/${id}`,
+          { date },
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        if (response.status === 404) {
+          throw new Error();
+        }
+        loadService(id);
+      } catch {
+        console.log(apiUrl);
+      }
+    },
+    [loadService]
+  );
+  return { loadService, updateConditionService, updateDateService };
 };
 
 export default useApi;
