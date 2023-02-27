@@ -1,1 +1,1 @@
-export type ActionTypesSong = "loadService";
+export type ActionTypesService = "loadService";

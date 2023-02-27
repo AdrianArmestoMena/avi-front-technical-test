@@ -6,16 +6,16 @@ import ProjectsContext from "./ServiceContext";
 
 interface ServiceContextProviderProps {
   children: JSX.Element | JSX.Element[];
-  initialProjectState?: ServiceSrtucture;
+  initialServiceState?: ServiceSrtucture;
 }
 
 const ServiceContextProvider = ({
   children,
-  initialProjectState = { service: {} as Service },
+  initialServiceState = { service: {} as Service },
 }: ServiceContextProviderProps): JSX.Element => {
   const [projectsState, dispatch] = useReducer(
     serviceReducer,
-    initialProjectState
+    initialServiceState
   );
 
   return (
