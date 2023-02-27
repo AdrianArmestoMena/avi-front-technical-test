@@ -25,6 +25,7 @@ interface Service {
   name: string;
   lastNames: string;
   brand: string;
+  dateFormat: number;
 }
 
 interface ResponseService {
