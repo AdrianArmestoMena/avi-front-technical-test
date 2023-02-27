@@ -1,8 +1,8 @@
 import Service from "../../../../types/Service";
-import { ActionTypesSong } from "./actionsTypesService";
+import { ActionTypesService } from "./actionsTypesService";
 
 export interface ServiceAction {
-  type: ActionTypesSong;
+  type: ActionTypesService;
   payload?: unknown;
 }
 
