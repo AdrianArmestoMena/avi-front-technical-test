@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { useParams } from "react-router-dom";
+import useApi from "../../hooks/useApi";
 import ServiceContext from "../../store/contexts/ServiceContext/ServiceContext";
 import { mechanicConditions, bodyWorkConditions } from "../../utils/conditions";
 import ConditionFormStyled from "./ConditionForm.Style";
@@ -7,6 +9,9 @@ const ConditionForm = (): JSX.Element => {
   const {
     service: { type, condition },
   } = useContext(ServiceContext);
+
+  const { id } = useParams();
+  const { updateConditionService } = useApi();
 
   return type ? (
     <>
@@ -41,6 +46,9 @@ const ConditionForm = (): JSX.Element => {
                   </div>
                 </div>
                 <button
+                  onClick={() => {
+                    updateConditionService(`${id}`, conditionItem);
+                  }}
                   className={`conditions__select ${
                     condition === conditionItem && "conditions__select--actual"
                   }`}
