@@ -5,9 +5,7 @@ const CalendarFormStyled = styled.section`
   flex-direction: column;
   width: fit-content;
   align-items: center;
-  gap: 0.5rem;
   margin: 0;
-  padding: 1rem;
   .calendar-form {
     &__label {
       gap: 0.5rem;
