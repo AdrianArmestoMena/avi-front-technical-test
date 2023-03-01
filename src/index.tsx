@@ -5,8 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ServiceContextProvider from "./store/contexts/ServiceContext/ServiceContextProvider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ServiceCard from "./components/ServiceCard/ServiceCard";
 import UiContextProvider from "./store/contexts/uiContext/UiContextProvider";
+import Layout from "./components/Layout/Layout";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "service/:id",
-        element: <ServiceCard />,
+        element: <Layout />,
         errorElement: <h1>Error</h1>,
       },
     ],
