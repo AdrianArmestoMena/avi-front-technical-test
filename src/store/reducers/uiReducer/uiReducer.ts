@@ -17,7 +17,7 @@ const uiReducer = (previewState: UiSrtucture, action: UIAction) => {
     case "openLoadingModal":
       newUiState = {
         ui: {
-          ...previewState.ui,
+          textContent: "Cargando..",
           isOpen: true,
           isCondition: false,
           isDate: false,
@@ -30,7 +30,7 @@ const uiReducer = (previewState: UiSrtucture, action: UIAction) => {
     case "openDateModal":
       newUiState = {
         ui: {
-          ...previewState.ui,
+          textContent: `La fecha de entrega se ha actualizado correctamente a ${action.payload}, informaremos al cliente.`,
           isOpen: true,
           isCondition: false,
           isDate: true,
@@ -43,7 +43,7 @@ const uiReducer = (previewState: UiSrtucture, action: UIAction) => {
     case "openConditionModal":
       newUiState = {
         ui: {
-          ...previewState.ui,
+          textContent: `El estado de la reparación se ha actualizado correctamente a ${action.payload}. ¿Desea actualizar la fecha de entrega?`,
           isOpen: true,
           isCondition: true,
           isDate: false,
