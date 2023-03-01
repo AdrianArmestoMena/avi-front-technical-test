@@ -5,9 +5,7 @@ const ServiceCardStyled = styled.article`
   flex-direction: column;
   align-items: center;
   width: 90vw;
-  @media (max-width: 700px) {
-    width: 90vw;
-  }
+  padding: 0.5rem;
   .service-card {
     &__desktop-table {
       @media (max-width: 700px) {
@@ -30,9 +28,10 @@ const ServiceCardStyled = styled.article`
     background-color: #d1d1d1;
     border-bottom: none;
     font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    @media (max-width: 700px) {
-      font-size: 1.2rem;
+    @media (min-width: 700px) {
+      font-size: 2rem;
     }
   }
   th {
@@ -40,18 +39,18 @@ const ServiceCardStyled = styled.article`
     border: 1px solid black;
     font-weight: 700;
     color: black;
-    font-size: 1.5rem;
-    @media (max-width: 700px) {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
+    @media (min-width: 700px) {
+      font-size: 1.5rem;
     }
   }
   td {
     text-align: center;
     border: 1px solid black;
     padding: 0.5rem;
-    font-size: 1.5rem;
-    @media (max-width: 700px) {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
+    @media (min-width: 700px) {
+      font-size: 1.5rem;
     }
   }
 `;
