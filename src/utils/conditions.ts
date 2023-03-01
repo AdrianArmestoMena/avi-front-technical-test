@@ -1,14 +1,16 @@
-export const mechanicConditions = [
+import { Condition } from "../types/Service";
+
+export const mechanicConditions: Condition[] = [
   "En espera",
   "Diagnosis",
-  "Espera recambio",
+  "Recambio Solicitado",
   "Inicio Reparacion",
   "Pruebas",
   "Limpieza",
   "Acabado",
 ];
 
-export const bodyWorkConditions = [
+export const bodyWorkConditions: Condition[] = [
   "En espera",
   "Peritado",
   "Recambio Solicitado",

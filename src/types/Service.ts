@@ -25,7 +25,6 @@ interface Service {
   name: string;
   lastNames: string;
   brand: string;
-  dateFormat: number;
 }
 
 interface ResponseService {
@@ -42,6 +41,7 @@ interface ResponseService {
 
 export interface Response {
   serviceData: ResponseService[];
+  error: string;
 }
 
 export default Service;
