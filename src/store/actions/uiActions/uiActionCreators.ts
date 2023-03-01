@@ -1,20 +1,25 @@
-export const closeModalActionCreator = () => ({
+import { Condition } from "../../../types/Service";
+import { UIAction } from "./types/actionsUi";
+
+export const closeModalActionCreator = (): UIAction => ({
   type: "closeModal",
 });
 
-export const openLoadingActionCreator = () => ({
+export const openLoadingActionCreator = (): UIAction => ({
   type: "openLoadingModal",
 });
 
-export const openDateActionCreator = () => ({
+export const openDateActionCreator = (date: string): UIAction => ({
   type: "openDateModal",
+  payload: date,
 });
 
-export const openConditionActionCreator = () => ({
+export const openConditionActionCreator = (condition: Condition): UIAction => ({
   type: "openConditionModal",
+  payload: condition,
 });
 
-export const openErrorActionCreator = (textContent: string) => ({
+export const openErrorActionCreator = (textContent: string): UIAction => ({
   type: "openErrorModal",
   payload: textContent,
 });
