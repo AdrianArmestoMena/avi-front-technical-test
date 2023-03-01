@@ -4,6 +4,7 @@ const ConditionFormStyled = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 
   .title-conditions {
     font-size: 1.5rem;
@@ -14,6 +15,7 @@ const ConditionFormStyled = styled.section`
     }
   }
   .conditions {
+    margin: 0;
     display: flex;
     margin: 0 auto;
     list-style: none;
@@ -74,6 +76,7 @@ const ConditionFormStyled = styled.section`
       }
     }
     &__select {
+      color: black;
       width: 100%;
       background-color: #00bfb2;
       padding: 0.5rem;

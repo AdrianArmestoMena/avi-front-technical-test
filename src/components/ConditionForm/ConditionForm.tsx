@@ -13,7 +13,7 @@ const ConditionForm = (): JSX.Element => {
   const { id } = useParams();
   const { updateConditionService } = useApi();
 
-  return type ? (
+  return (
     <>
       <ConditionFormStyled>
         <ul className="conditions">
@@ -62,8 +62,6 @@ const ConditionForm = (): JSX.Element => {
         </ul>
       </ConditionFormStyled>
     </>
-  ) : (
-    <p>Cargando</p>
   );
 };
 
