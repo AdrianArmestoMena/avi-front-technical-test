@@ -34,15 +34,15 @@ const CalendarModal = (): JSX.Element => {
 
   return (
     <CalendarFormStyled>
-      <label className="calendar-form__label" htmlFor="datePicker">
-        Actualizar fecha de entrega
-      </label>
       <DatePicker
         className="calendar-form__input"
         id="datePicker"
         selected={date ? new Date(date) : today}
         onChange={(date: Date) => sendDate(date)}
       />
+      <label className="calendar-form__label" htmlFor="datePicker">
+        Actualizar fecha de entrega
+      </label>
     </CalendarFormStyled>
   );
 };
