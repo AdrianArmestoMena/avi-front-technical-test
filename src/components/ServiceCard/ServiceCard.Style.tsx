@@ -5,7 +5,6 @@ const ServiceCardStyled = styled.article`
   flex-direction: column;
   align-items: center;
   width: 90vw;
-  padding: 0.5rem;
   .service-card {
     &__desktop-table {
       @media (max-width: 700px) {
