@@ -24,7 +24,7 @@ const ServiceCard = (): JSX.Element => {
   const getDate = (date: string): string => {
     if (date) {
       const dateDay = new Date(date);
-      dateDay.setDate(dateDay.getDate() + 1);
+      dateDay.setDate(dateDay.getDate());
 
       const month = dateDay.getUTCMonth() + 1; //months from 1-12
       const day = dateDay.getUTCDate();

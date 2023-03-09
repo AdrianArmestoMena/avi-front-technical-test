@@ -20,7 +20,7 @@ const CalendarModal = (): JSX.Element => {
     let day;
 
     const dateDay = new Date(newDate);
-    dateDay.setDate(dateDay.getDate() + 1);
+    dateDay.setDate(dateDay.getDate());
 
     month = dateDay.getUTCMonth() + 1; //months from 1-12
     day = dateDay.getUTCDate();
